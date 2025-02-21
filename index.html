@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Modern Contact Form</title>
+    <link rel="stylesheet" href="ContactForm.css">
+</head>
+<body>
+    <!-- Main Form Container -->
+    <div class="container">
+        <form class="contact-form" id="contactForm" novalidate>
+            <!-- Success/Error Alert -->
+            <div class="alert alert-success" id="successAlert">Message sent successfully!</div>
+            <div class="alert alert-error" id="errorAlert">Please fix the errors below.</div>
+
+            <h1 class="form-title">Contact Us</h1>
+            
+            <!-- Name Input -->
+            <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" id="name" class="form-input" required>
+                <div class="error-message" id="nameError">Please enter your name</div>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" class="form-input" required>
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" class="form-input" required></textarea>
+                <div class="error-message" id="messageError">Please enter your message</div>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <!-- Messages List -->
+        <div class="messages-list" id="messagesList">
+            <h2 class="messages-title">Submitted Messages</h2>
+            <div class="messages-container" id="messagesContainer"></div>
+        </div>
+    </div>
+
+    <script src="ContactForm.js"></script>
+</body>
+</html>
